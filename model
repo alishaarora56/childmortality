@@ -1,0 +1,43 @@
+import pandas as pd
+import numpy as np
+import sklearn
+from sklearn import linear_model
+from sklearn.linear_model import LogisticRegression
+
+data = pd.read_csv('Nat2015us.zip', sep = ";")
+
+data = data []
+
+predict = ""
+
+X = np.array(data.drop([predict], 1))
+y = np.array(data[predict])
+
+X_train, y_train, X_test, y_test = sklearn.model_selection.train_test_split(X, y, test_size = 1)
+
+linear = linear_model.LogisticRegression()
+
+linear.fit (X_train, y_train)
+acc = linear.score(X_test, y_test)
+print(acc)
+
+import matplotlib
+import matplotlib.pyplot as plt
+
+plt.style.use('classic')
+
+
+x = np.linspace(0, 10, 100)
+
+plt.plot(x, np.sin(x))
+plt.plot(x, np.cos(x))
+
+plt.show()
+$ python myplot.py
+
+fig.savefig('my_figure.png')
+!ls -lh my_figure.png
+Image('my_figure.png')
+
+
+
